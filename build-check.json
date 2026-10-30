@@ -1,0 +1,14 @@
+{
+  "live_exports": 15886,
+  "matching_fresh_exports": 15886,
+  "differences": {},
+  "raw_image_sha256": "c99245762e34acb8b7c1398c4a2c999a9c6c4d95c56cacda4dc165c64bc3066c",
+  "build_warning_lines": [
+    "WARNING: modpost: vmlinux.o(.text+0xc7613c): Section mismatch in reference from the function codec_mm_probe() to the function .init.text:secure_vdec_res_setup()",
+    "WARNING: modpost: vmlinux.o(.text+0xc76140): Section mismatch in reference from the function codec_mm_probe() to the function .init.text:secure_vdec_res_setup()",
+    "WARNING: modpost: vmlinux.o(.text+0xc76154): Section mismatch in reference from the function codec_mm_probe() to the function .init.text:codec_mm_res_setup()",
+    "WARNING: modpost: vmlinux.o(.text+0xc76158): Section mismatch in reference from the function codec_mm_probe() to the function .init.text:codec_mm_res_setup()"
+  ],
+  "warning_lines_not_in_baseline": [],
+  "source_patch_sha256": "9a94336df32cc143a226f7a0a5955de8a37925a4c58362e2dfb132e9d88c0224"
+}

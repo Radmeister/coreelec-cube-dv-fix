@@ -1,0 +1,76 @@
+{
+  "boot1-six-plays": {
+    "status": "passed",
+    "normal_play_Y": [
+      17,
+      17,
+      17,
+      17,
+      17,
+      17
+    ],
+    "uncaptured_starts": 0,
+    "challenge_Y": [
+      17,
+      17,
+      17,
+      17,
+      17,
+      17
+    ],
+    "guard_off_Y": [
+      21
+    ],
+    "guard_on_Y": [
+      17
+    ]
+  },
+  "boot2-five-starts-capture-last": {
+    "status": "passed",
+    "normal_play_Y": [
+      17
+    ],
+    "uncaptured_starts": 4,
+    "challenge_Y": [],
+    "guard_off_Y": [],
+    "guard_on_Y": []
+  },
+  "boot3-original-module": {
+    "status": "passed",
+    "normal_play_Y": [
+      17,
+      17,
+      17
+    ],
+    "uncaptured_starts": 0,
+    "challenge_Y": [
+      17,
+      17,
+      17
+    ],
+    "guard_off_Y": [
+      21
+    ],
+    "guard_on_Y": [
+      17
+    ]
+  },
+  "boot4-final-config": {
+    "status": "passed",
+    "normal_play_Y": [
+      17,
+      17
+    ],
+    "uncaptured_starts": 0,
+    "challenge_Y": [],
+    "guard_off_Y": [],
+    "guard_on_Y": []
+  },
+  "user_visual_confirmation": {
+    "date": "2026-10-30",
+    "route": "Plex",
+    "test": "Two episodes, each played twice",
+    "result": "All four playbacks had good blacks"
+  },
+  "measurement_scope": "Internal VDIN 8-bit luma codes; not nits or independent HDMI measurements."
+}

@@ -1,0 +1,10 @@
+kernel*.img
+check-report.json
+kernel-config.gz
+manifest.json
+__pycache__/
+*.pyc
+*.zip
+*.tar.gz
+Cube-DV-Fix-Backups/
+build/

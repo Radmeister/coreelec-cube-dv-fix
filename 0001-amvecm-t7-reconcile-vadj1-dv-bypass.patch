@@ -1,0 +1,53 @@
+diff --git a/drivers/media/enhancement/amvecm/amve.c b/drivers/media/enhancement/amvecm/amve.c
+--- a/drivers/media/enhancement/amvecm/amve.c
++++ b/drivers/media/enhancement/amvecm/amve.c
+@@ -3278,6 +3278,29 @@
+ }
+ #endif
+ 
++/*
++ * Kodi's brightness/contrast sysfs stores can re-enable VADJ1 after the DV
++ * bypass cache has already reached zero. Reconcile the live enable bit while
++ * T7 VPP0 is under STB DV bypass; keep SDR/HDR10-only and other VPPs unchanged.
++ */
++static bool pq_vadj1_sync = true;
++module_param(pq_vadj1_sync, bool, 0600);
++MODULE_PARM_DESC(pq_vadj1_sync, "Reconcile T7 STB DV VADJ1 bypass with hardware");
++static unsigned long pq_vadj1_resyncs;
++module_param(pq_vadj1_resyncs, ulong, 0444);
++MODULE_PARM_DESC(pq_vadj1_resyncs, "T7 STB DV VADJ1 enable-bit corrections");
++
++static bool t7_dv_vadj1_needs_sync(u8 requested_enable, int vpp_index)
++{
++	if (pq_vadj1_sync && is_meson_t7_cpu() && vpp_index == 0 &&
++	    dv_pq_bypass == 2 && !requested_enable &&
++	    READ_VPP_REG_BITS(VPP_VADJ1_MISC, 0, 1)) {
++		pq_vadj1_resyncs++;
++		return true;
++	}
++	return false;
++}
++
+ int vpp_pq_ctrl_config(struct pq_ctrl_s pq_cfg, enum wr_md_e md, int vpp_index)
+ {
+ 	switch (md) {
+@@ -3377,7 +3400,8 @@
+ 						pq_cfg.sharpness1_en, 1, 1);
+ 			}
+ #endif
+-			if (pq_cfg_cur.vadj1_en != pq_cfg.vadj1_en) {
++			if (pq_cfg_cur.vadj1_en != pq_cfg.vadj1_en ||
++			    t7_dv_vadj1_needs_sync(pq_cfg.vadj1_en, vpp_index)) {
+ 				pq_cfg_cur.vadj1_en = pq_cfg.vadj1_en;
+ 				if (get_cpu_type() >= MESON_CPU_MAJOR_ID_G12A)
+ 					WRITE_VPP_REG_BITS(VPP_VADJ1_MISC,
+@@ -3544,7 +3568,8 @@
+ 						pq_cfg.sharpness1_en, 1, 1, vpp_index);
+ 			}
+ #endif
+-			if (pq_cfg_cur.vadj1_en != pq_cfg.vadj1_en) {
++			if (pq_cfg_cur.vadj1_en != pq_cfg.vadj1_en ||
++			    t7_dv_vadj1_needs_sync(pq_cfg.vadj1_en, vpp_index)) {
+ 				pq_cfg_cur.vadj1_en = pq_cfg.vadj1_en;
+ 				if (get_cpu_type() >= MESON_CPU_MAJOR_ID_G12A)
+ 					VSYNC_WRITE_VPP_REG_BITS_VPP_SEL(VPP_VADJ1_MISC,

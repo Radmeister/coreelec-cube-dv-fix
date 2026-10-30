@@ -1,0 +1,15 @@
+{
+  "format": "Android boot v0",
+  "roundtrip_original_exact": true,
+  "original_sha256": "cde2bace4057ce743d26735a81c8323b21fcce638b1649e4bda309568b683d16",
+  "new_sha256": "071498095ae2362caaea3ff052b3262fadd904fd37bd607128fc307b517e4b10",
+  "kernel_lzo_bytes": 17003583,
+  "image_bytes": 24639488,
+  "ramdisk_unchanged": true,
+  "ramdisk_sha256": "86a6927577c9ab165123cadac9b9c67bedec9fb0376b1118eaadaf32d4677323",
+  "header_only_changes": [
+    "kernel_size",
+    "standard_boot_id"
+  ],
+  "bootloader_changes": false
+}
