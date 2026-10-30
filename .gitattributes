@@ -3,3 +3,5 @@
 *.ps1 text eol=crlf
 *.md text eol=lf
 *.patch text eol=lf
+*.png binary
+*.nv12 binary
