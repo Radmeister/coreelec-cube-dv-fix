@@ -2,6 +2,8 @@
 
 The downloadable installer image is for one exact release. Maintainers can use the [small driver patch](0001-amvecm-t7-reconcile-vadj1-dv-bypass.patch) independently; newer branches may need rebasing and validation.
 
+Read the [illustrated investigation and integration checklist](TECHNICAL.md) for the hardware/cache mismatch, raw evidence, exact gates, and validation steps before adapting the patch.
+
 ## Pinned source inputs
 
 | Component | Repository and revision |

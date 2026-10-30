@@ -6,6 +6,12 @@ The fix corrects a mismatch in the Amlogic host video driver's VADJ1 brightness 
 
 **Confirmed working on two Cubes.** This is an independent community package, not an official CoreELEC or SamuriHL release.
 
+## The problem and why this fixes it
+
+The driver could report that its brightness stage was bypassed while that stage remained enabled in hardware. On the same paused frame, enabling the correction changed the captured dark background from **Y21 back to the known-good Y17**, with Dolby Vision processing and HDR10 output still active.
+
+**[Read the illustrated investigation and maintainer guide](TECHNICAL.md)** for our actual before/after captures, raw readings, the kernel code paths responsible, the exact fix, and how to integrate and validate it in another build. The numbers are internal capture codes, not nits.
+
 ## Download and install
 
 **[Download Cube-DV-Fix-v1.1.zip](https://github.com/Radmeister/coreelec-cube-dv-fix/releases/download/v1.1/Cube-DV-Fix-v1.1.zip)** from the [release page](https://github.com/Radmeister/coreelec-cube-dv-fix/releases/tag/v1.1). Extract it, then follow your computer's guide:

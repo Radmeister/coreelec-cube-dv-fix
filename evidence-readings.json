@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "experiment": "Same paused title card, correction disabled then restored; no playback restart or reboot between these two captures",
+  "format": {
+    "pixel_format": "NV12",
+    "width": 1280,
+    "height": 720,
+    "luma_stride_bytes": 1280,
+    "luma_offset_bytes": 0,
+    "luma_plane_bytes": 921600,
+    "capture_file_bytes": 1384448,
+    "canonical_nv12_bytes": 1382400,
+    "trailing_bytes_not_used_for_luma_stats": 2048
+  },
+  "roi": {
+    "coordinate_origin": "top-left",
+    "x_start_inclusive": 400,
+    "x_end_exclusive": 880,
+    "y_start_inclusive": 200,
+    "y_end_exclusive": 300,
+    "samples": 48000
+  },
+  "measurement_scope": "Internal VDIN 8-bit luma codes; not nits, raw PQ codes or independent HDMI-wire measurements. PNGs are unmodified saved viewing conversions; numeric measurements use the NV12 luma plane.",
+  "samples": [
+    {
+      "label": "raised",
+      "experiment_stage": "guard-off-control",
+      "paused_playback_seconds": 5.705,
+      "correction_enabled": "N",
+      "correction_request_counter": 15,
+      "brightness_sysfs_value_written": 0,
+      "requested_vadj1_dv_bypass": 0,
+      "cached_vadj1_enable": 0,
+      "hardware_register": {
+        "name": "VPP_VADJ1_MISC",
+        "address": "0x3280",
+        "value": "0x3",
+        "enable_bit_0": 1
+      },
+      "dv_pq_bypass": 2,
+      "debug_bypass_vpp_pq": 0,
+      "dv_processing_active": true,
+      "reported_hdmi_output": "HDR10",
+      "luma": {
+        "minimum": 21,
+        "median": 21,
+        "maximum": 21
+      },
+      "files": {
+        "png": {
+          "path": "evidence-vadj1-raised.png",
+          "bytes": 22505,
+          "sha256": "821db883a751817b0a93b57e1c7bdd20d9c15e2d4457568f421d5c104fed4d76"
+        },
+        "nv12": {
+          "path": "evidence-vadj1-raised.nv12",
+          "bytes": 1384448,
+          "sha256": "eeb798138aa7705c908f9d78dfd227bbb1920fa2835fd0b5d14c9c606ee5a7cc"
+        }
+      },
+      "brightness_sysfs_baseline_value": 0
+    },
+    {
+      "label": "restored",
+      "experiment_stage": "guard-on-restored",
+      "paused_playback_seconds": 5.705,
+      "correction_enabled": "Y",
+      "correction_request_counter": 16,
+      "brightness_sysfs_value_written": null,
+      "requested_vadj1_dv_bypass": 0,
+      "cached_vadj1_enable": 0,
+      "hardware_register": {
+        "name": "VPP_VADJ1_MISC",
+        "address": "0x3280",
+        "value": "0x2",
+        "enable_bit_0": 0
+      },
+      "dv_pq_bypass": 2,
+      "debug_bypass_vpp_pq": 0,
+      "dv_processing_active": true,
+      "reported_hdmi_output": "HDR10",
+      "luma": {
+        "minimum": 17,
+        "median": 17,
+        "maximum": 17
+      },
+      "files": {
+        "png": {
+          "path": "evidence-vadj1-restored.png",
+          "bytes": 24340,
+          "sha256": "3754d6a68c4df282cae716484e059ab579765ca27bfb1a04f9f0210a9e603200"
+        },
+        "nv12": {
+          "path": "evidence-vadj1-restored.nv12",
+          "bytes": 1384448,
+          "sha256": "f51171e939635899b6a85a30d827544a64b1cf060e3bcc8ed0329a23e2a5735c"
+        }
+      },
+      "brightness_sysfs_baseline_value": 0
+    }
+  ]
+}

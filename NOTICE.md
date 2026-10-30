@@ -6,6 +6,8 @@ The kernel correction targets `CoreELEC/common_drivers`, not the proprietary Dol
 
 The new installer/helpers and original documentation in this repository are provided under **GPL-2.0-only**; see [LICENSE](LICENSE). The driver patch modifies existing GPL-licensed kernel code under that code's existing license. Upstream source archives include their own licensing notices. No license to proprietary Dolby software is granted.
 
+The two title-card captures and their matching raw buffers are short diagnostic excerpts documenting the fault and correction. The underlying programme/title-card content belongs to its respective rights holders and is not relicensed under the software's GPL license.
+
 This is an independent community project. It is not an official release or endorsement by SamuriHL, Team CoreELEC, Amazon, Samsung, or Dolby. The current binary is limited to the exact build documented in [COMPATIBILITY.md](COMPATIBILITY.md).
 
 Complete pinned kernel/driver source inputs, release patches, configuration, and preparation/build scripts are supplied as the separate **Cube-DV-Fix-source-v1.1.tar.gz** release asset. Maintainers can also use the small source patch directly. See [BUILDING.md](BUILDING.md).

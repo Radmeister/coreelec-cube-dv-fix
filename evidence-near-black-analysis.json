@@ -1,0 +1,91 @@
+{
+  "roi_xyxy": [
+    20,
+    140,
+    1260,
+    450
+  ],
+  "brightness_bins": [
+    {
+      "good_Y_range": [
+        16,
+        20
+      ],
+      "pixels": 85680,
+      "equal_fraction": 0.006605975723622782,
+      "median_delta": 2.0,
+      "delta_min": 0,
+      "delta_max": 3
+    },
+    {
+      "good_Y_range": [
+        21,
+        25
+      ],
+      "pixels": 157743,
+      "equal_fraction": 0.9995245430859055,
+      "median_delta": 0.0,
+      "delta_min": 0,
+      "delta_max": 1
+    },
+    {
+      "good_Y_range": [
+        26,
+        35
+      ],
+      "pixels": 119219,
+      "equal_fraction": 1.0,
+      "median_delta": 0.0,
+      "delta_min": 0,
+      "delta_max": 0
+    },
+    {
+      "good_Y_range": [
+        36,
+        60
+      ],
+      "pixels": 21057,
+      "equal_fraction": 1.0,
+      "median_delta": 0.0,
+      "delta_min": 0,
+      "delta_max": 0
+    },
+    {
+      "good_Y_range": [
+        61,
+        100
+      ],
+      "pixels": 372,
+      "equal_fraction": 1.0,
+      "median_delta": 0.0,
+      "delta_min": 0,
+      "delta_max": 0
+    },
+    {
+      "good_Y_range": [
+        101,
+        160
+      ],
+      "pixels": 329,
+      "equal_fraction": 1.0,
+      "median_delta": 0.0,
+      "delta_min": 0,
+      "delta_max": 0
+    }
+  ],
+  "Y_above_20_equal_fraction": 0.9997489287627209,
+  "all_Y_delta_min": 0,
+  "all_Y_delta_max": 3,
+  "chroma_equal_fraction": 0.9794068678459937,
+  "chroma_delta_min": -1,
+  "chroma_delta_max": 1,
+  "video_Y_correlation": 0.9944630006672733,
+  "limitations": [
+    "Internal 8-bit scaled NV12 capture, not independent HDMI measurement or nits.",
+    "Dark scene contains few brighter pixels and does not test peak HDR highlights.",
+    "Matching established by frame stepping, identical moving-subject detail and unchanged higher-code pixels; original reported playback time alone was insufficient.",
+    "The orange progress-bar captured pixels match exactly, despite reported TV colour difference."
+  ],
+  "conclusion": "In this matched captured scene, the measurable alteration is concentrated in near-black values; a uniform lift across the captured image is not supported.",
+  "context": "Separate earlier matched moving-frame comparison near 10 minutes; target 1000 nits held constant within pair. Not the 2150-nit same-paused-frame guard control shown in the illustrated report."
+}
