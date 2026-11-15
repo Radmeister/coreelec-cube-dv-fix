@@ -12,6 +12,14 @@ The driver could report that its brightness stage was bypassed while that stage 
 
 **[Read the illustrated investigation and maintainer guide](TECHNICAL.md)** for our actual before/after captures, raw readings, the kernel code paths responsible, the exact fix, and how to integrate and validate it in another build. The numbers are internal capture codes, not nits.
 
+## Tested October 30 update
+
+**The full October update with this correction was installed and tested on a Fire TV Cube 3 on 15 November 2026.** Four Plex playback starts retained the correct VADJ1 hardware state with DV processing and HDR10 output; the owner confirmed normal TV blacks on the first and fourth plays.
+
+**[Download the tested October update](https://github.com/Radmeister/CoreELEC/releases/tag/cube-vadj1-20261030-test1)** · **[Windows/macOS/Linux update guide](https://github.com/Radmeister/CoreELEC/blob/cube-vadj1-20261030/CUBE-VADJ1.md)** · **[Detailed results and test scope](https://github.com/Radmeister/CoreELEC/blob/cube-vadj1-20261030/CUBE-VADJ1-TEST-RESULTS.md)**
+
+The October package is separate from the September-only v1.1 kernel installer below. **Do not apply the v1.1 September kernel to the October build.** The new release remains a community prerelease with targeted DV-to-HDR10 validation.
+
 ## Download and install
 
 **[Download Cube-DV-Fix-v1.1.zip](https://github.com/Radmeister/coreelec-cube-dv-fix/releases/download/v1.1/Cube-DV-Fix-v1.1.zip)** from the [release page](https://github.com/Radmeister/coreelec-cube-dv-fix/releases/tag/v1.1). Extract it, then follow your computer's guide:
